@@ -65,11 +65,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+  var hum = sum(a, b)[0];
+  hum = sum(hum, c)[0];
+  var holt = multiply(a, b)[0];
+  holt = multiply(holt, c)[0];
+  var thirdElement = '' + a + ' and ' + b + ' and ' + c + ' sum to ' + hum + '.';
+  var fourthElement = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + holt + '.';
+  var array = [hum, holt, thirdElement, fourthElement];
+  console.log(array);
+  return array;
 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
